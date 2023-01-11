@@ -161,7 +161,7 @@ function drawGraph(pre_nodes, pre_links, use_drag = true) {
   // displaying node data on click
   node.on("click", function (d) {
     let node = document.getElementById("nodeData");
-    let nodeData = pre_nodes.get(d["target"]["__data__"]["name"]);
+    let nodeData = pre_nodes.get(d["currentTarget"]["__data__"]["name"]);
     node.innerHTML = "<h3>" + typeToLabel(nodeData.type) + " Node</h3>";
     node.innerHTML += "<h5>Node Name:" + nodeData.id + "</h5>";
 
